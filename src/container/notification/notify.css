@@ -1,0 +1,10 @@
+#notification_service_main_div {
+    position: fixed;
+    z-index: 200;
+    width: 100vh;
+    height: 60px;
+    background-color: red;
+    top: -60px;
+    text-align: center;
+    transition: all 0.3s;
+}

@@ -1,0 +1,25 @@
+.profileComp .his_qoute{
+    background-color: gainsboro;
+    border-radius: 20px;
+    text-align: left;
+    color: black;
+}
+.profileComp .his_qoute > div {
+    padding: 0px 10px;
+    text-align: center;
+    width: calc(100% - 20px);
+}
+.profileComp .his_qoute > i {
+    position: relative;
+}
+.profileComp .his_qoute :nth-child(1) {
+    top: -2px
+}
+.profileComp .his_qoute :nth-child(3) {
+    margin-left: calc(100% - 20px);
+    top: 2px;
+}
+.profileComp .his_qoute p {
+    font-size: 2vh;
+    white-space: pre-wrap;
+}

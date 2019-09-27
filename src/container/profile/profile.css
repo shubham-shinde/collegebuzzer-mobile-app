@@ -1,0 +1,32 @@
+.profileComp .his_qoute{
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 20px;
+    text-align: left;
+    color: white;
+}
+.profileComp .his_qoute > div {
+    padding: 0px 10px;
+    text-align: center;
+    color:white;
+    width: calc(100% - 20px);
+}
+.profileComp .his_qoute > i {
+    position: relative;
+}
+.profileComp .his_qoute :nth-child(1) {
+    top: -2px
+}
+.profileComp .his_qoute :nth-child(3) {
+    margin-left: calc(100% - 20px);
+    top: 2px;
+}
+.profileComp .his_qoute textarea {
+    font-size: 16px;
+    white-space: pre-wrap;
+    color:white;
+}
+.profileComp .his_qoute p {
+    font-size: 16px;
+    white-space: pre-wrap;
+    color:white;
+}

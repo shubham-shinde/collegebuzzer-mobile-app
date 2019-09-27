@@ -1,0 +1,224 @@
+.grid-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px minmax(200px, auto) 20px minmax(100px, auto);
+    grid-template-areas: "pic header"
+                         "content content"
+                         "like like"
+                         "comment comment"; 
+}
+.pic,
+.header,
+.time,
+.content,
+.like,
+.prv_comment,
+.new_comment,
+.likes_and_shares {
+}
+
+.header > div,
+.time > div,
+.content > div,
+.prv_comment > div,
+.new_comment > div{
+    margin: 10px;
+}
+
+/* pic item from here */
+.pic {
+    background-color: white;
+    padding: 10px;
+    grid-area: pic; 
+}
+
+
+
+
+/* header item from here */
+.header {
+    background-color: white;
+    grid-area: header; 
+}
+
+
+
+/* content item from here */
+.content {
+    background-color: white;
+    grid-area: content; 
+}
+
+
+
+
+/* like item from here */
+.like {
+    background-color: white;
+    grid-area: like; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.like > span {
+    grid-area: auto;
+}
+
+
+/* likes and shares */
+.likes_and_shares {
+    grid-area: likes_and_shares;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "likes comment"
+}
+.likes_and_shares :nth-child(1) {
+    margin-left: 20px;
+    grid-area: likes
+}
+.likes_and_shares :nth-child(2) {
+    margin: 0 10px;
+    grid-area: comment;
+}
+
+
+
+
+/* comment_grid item from here */
+.comment_grid {
+    background-color: white;
+    grid-area: comment; 
+
+}
+.comment_grid_container {
+    display: grid;
+    grid-template-rows: 10px minmax(10,auto) 10px;
+    background-color: rgba(78, 77, 77, 0.3);
+    border-radius: 20px;
+    grid-template-columns: 100%;
+    grid-template-areas: "name"
+                         "comment"
+                         "reply";
+}
+.comment_grid_container > .prv_comment_name {
+    grid-area: name;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.comment_grid_container > .prv_comment_name :nth-child(1) {
+    color: blue;
+}
+.comment_grid_container > .prv_comment_name :nth-child(2) {
+    margin-left: 30px;
+}
+.comment_grid_container > .prv_comment_comment {
+    width: 100%;
+    margin-top: 5px;
+    grid-area: comment;
+}
+.comment_grid_container > .prv_comment_comment > div {
+    margin: 5px;
+}
+.comment_grid_container > .prv_comment_replys {
+    margin-left: 15%;
+    grid-area: reply;
+}
+
+/* grid container for reply */
+.comment_grid_container > .prv_comment_replys > div > .prv_comments_all_replys {
+    display: grid;
+    grid-template-columns: 10px minmax(20, auto);
+    background-color: rgba(78, 77, 77, 0.2);
+    border-radius: 20px;
+    grid-template-areas: "name"
+                         "rply";
+}
+.prv_comments_all_replys > .prv_comments_all_replys_name {
+    grid-area: name;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.prv_comments_all_replys > .prv_comments_all_replys_name :nth-child(1) {
+    color : orange;
+}
+.prv_comments_all_replys > .prv_comments_all_replys_name :nth-child(2) {
+    margin-left: 30px;
+}
+.prv_comments_all_replys > .prv_comments_all_replys_rply {
+    grid-area: rply;
+    width: 95%;
+    padding-left: 10px;
+}
+
+/* grid container for your */
+.comment_grid_container > div > .your_rply {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "input reply";
+}
+.comment_grid_container > div > div > .prv_comment_input {
+    margin-top: 5px;
+    padding: 1px;
+    width: 90%;
+    height: 1em;
+    overflow: hidden;
+    border: darkorange 1px solid;
+    border-radius: 20px;
+    grid-area: input;
+}
+.comment_grid_container > div > div > .prv_comment_reply_button {
+    justify-content: center;
+    background-color: firebrick;
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+    border-radius: 20px;
+    padding: 1px auto;
+    text-align: center;
+    grid-area: reply;
+}
+
+
+
+
+/* new_comment item from here */
+.new_comment {
+    background-color: white;
+    grid-area: new_comment;
+}
+.new_comment > .new_comment_grid_container {
+    display: grid;
+    grid-template-columns: 75% auto ;
+    justify-items: center;
+    align-items: center;
+}
+.new_comment > div >  .comment_input {
+    grid-column: 1/2;
+    padding: 1px;
+    width: 95%;
+    height: 1em;
+    overflow: hidden;
+    border: darkorange 1px solid;
+    border-radius: 20px;
+}
+.new_comment > div > .comment_button {
+    grid-column: 2/3;
+    justify-content: center;
+    background-color: firebrick;
+    font-size: 1em;
+    color: white;
+    border-radius: 20px;
+    padding: 1px 7px;
+    text-align: center;
+}
+
+.backGradient {
+    background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+    position: relative;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    margin: 1rem 0;
+    padding: 1em;
+    border-radius: .28571429rem;
+    border: 1px solid rgba(34,36,38,.15);
+}

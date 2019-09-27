@@ -1,0 +1,7 @@
+{
+    "extends": "rallycoding",
+    "rules": {
+        "no-underscore-dangle": [2, { "allow": ["_id"] }],
+        "no-console": "warn"
+    }
+}
